@@ -1,4 +1,4 @@
-<hello name="{{ name }}"></hello>
+<!-- <hello name="{{ name }}"></hello>
 <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
   <input type="text" ngModel name="name" placeholder="Enter your name" />
   <br />
@@ -12,9 +12,17 @@
   />
   <br />
   <button>Register</button>
-</form>
+</form> -->
 
-<button (click)="toggle()">Clik me</button>
+<input type="text" placeholder="Enter your name" #task />
+<button (click)="addtask(task.value)">add task</button>
+
+<ul *ngFor="let item of list">
+  <li>{{ item.id }}</li>
+  <li>{{ item.name }}</li>
+</ul>
+
+<!-- <button (click)="toggle()">Clik me</button>
 <p ngif= >Here i am doing things out of the blue</p>
 <ul>
   <li>
@@ -26,4 +34,4 @@
   <li>
     {{ userData.password }}
   </li>
-</ul>
+</ul> -->

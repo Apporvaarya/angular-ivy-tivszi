@@ -19,4 +19,17 @@ export class AppComponent {
   toggle(para: any) {
     para.display = !para.display;
   }
+  list: any[] = [];
+
+  addtask(value: string) {
+    //console.log(value);
+    this.list.push({ id: this.list.length, name: value });
+    for (var i = 0; i < this.list.length; i++) {
+      console.log(this.list[i].id);
+      console.log(this.list[i].name);
+    }
+  }
+
+  
+  // add above values in list
 }
